@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Book</title>
+</head>
+<body>
+<div>
+    <h2>Edit existing book</h2>
+    <br />
+    <form action="#" th:action="@{/edit_book}" th:object="${book}" method="put">
+        <table>
+            <tr>
+                <td>Book Id:</td>
+                <td><input type="text" th:field="*{idb}" readonly="readonly" /></td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td><input type="text" th:field="*{title}" /></td>
+            </tr>
+            <tr>
+                <td>Publisher id</td>
+                <td><input type="text" th:field="*{publisher.idp}" /></td>
+            </tr>
+            <tr>
+                <td>Category id</td>
+                <td><input type="text" th:field="*{category.idc}" /></td>
+            </tr>
+        </table>
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+</body>
+</html>
